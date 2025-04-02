@@ -34,7 +34,6 @@ app.get('/', function(req, res) {
             if (err) console.error(err);
         });
        res.send(os.hostname() +': Number of visits is: ' + numVisitsToDisplay);
-        numVisits++;
         redisClient.set('numVisits', numVisits);
     });
 });
